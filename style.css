@@ -7,7 +7,7 @@
 
 .civmodellist figure {
 	margin: 6px;
-	transition: transform .3s ease-out, box-shadow 0.3s ease;
+	transition: transform .3s ease-out, box-shadow .3s ease;
 	cursor: pointer;
 	border-radius: 10px;
 }
@@ -17,9 +17,8 @@
 }
 
 .civmodelcard:hover {
-	transform: scale(1.1, 1.1);
-	position: relative;	
-	z-index: var(--layer-5);
+	transform: scale(1.1);
+	z-index: 5;
 	box-shadow: 0px 0px 1px 3px whitesmoke;
 }
 
@@ -31,7 +30,7 @@
 	box-shadow: 0px 0px 1px 3px orange;
 }
 
-.civmodelcard:hover figcaption{
+.civmodelcard:hover figcaption {
 	bottom: initial;
 	background-color: rgba(32, 32, 32, 0.9);
 }
@@ -55,17 +54,13 @@
 
 /* End of Card list HTML */
 
-#quicksettings > div{
-	max-width: None !important;
+#quicksettings > div {
+	max-width: initial !important;
 	width: auto !important;
 }
 
-#togglesL{
+#togglesL, #toggles {
 	margin-top: 3px;
-}
-
-#toggles{
-	margin-top: -10px;
 }
 
 #searchType > div {
@@ -100,7 +95,6 @@
 }
 
 #browserTab > div > #header {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: var(--neutral-950);
@@ -111,8 +105,8 @@
     gap: var(--layout-gap);
 }
 
-#txt2img_seed > label > input{
-    height: unset !important;
+#txt2img_seed > label > input {
+    height: initial !important;
 }
 
 #browserTab > div > #header, #browserTab > div > #header_off {
@@ -122,7 +116,7 @@
     margin-top: -15px;
 }
 
-#toggle1, #toggle2, #toggle3, #toggle4, #toggle4_api, #toggle5{
+#toggle1, #toggle2, #toggle3, #toggle4, #toggle4_api, #toggle5 {
 	margin-top: 5px;
     margin-right: 0px;
     margin-left: 0px;
@@ -157,7 +151,7 @@
 #download_all_button {
     max-height: 40px;
     height: 40px;
-    align-self: end;
+    align-self: flex-end;
     margin-bottom: 1px;
 }
 
@@ -231,11 +225,11 @@
 }
 
 #pageBox > div:first-child {
-    align-items: end;
+    align-items: flex-end;
 }
 
 #refreshBtn, #refreshBtnL {
-    align-self: end;
+    align-self: flex-end;
     height: 42px !important;
     min-height: 42px !important;
     max-height: 42px !important;
@@ -265,7 +259,7 @@
     min-width: 220px !important;
     margin-bottom: -6px;
     padding: 5px;
-    height: unset !important;
+    height: initial !important;
     min-height: 35px !important;
 }
 
@@ -280,7 +274,7 @@
     width: 20px;
     min-width: 20px;
     height: 20px;
-    background: #111B;
+    background: rgba(17, 17, 187, 0.1);
     border-radius: var(--checkbox-border-radius);
     border: 1px solid #bbbbbb;
     cursor: pointer;
@@ -307,7 +301,7 @@
     margin-top: -12px;
 }
 
-#model_header:hover{
+#model_header:hover {
     color: var(--link-text-color-hover);
 }
 
@@ -394,14 +388,14 @@
     color: var(--link-text-color-hover);
     cursor: pointer;
 }
-/* Customized Accordion Filter */
 
+/* Customized Accordion Filter */
 #filterBox,
 #filterBoxL {
-    align-self: end;
+    align-self: flex-end;
     height: 42px;
     max-width: 42px;
-    padding: unset !important;
+    padding: initial !important;
     margin: 0px !important;
     display: flex;
     justify-content: center;
@@ -421,8 +415,8 @@
 }
 
 #filterBox .label-wrap.open,
-#filterBoxL .label-wrap.open{
-    border-bottom: unset !important;
+#filterBoxL .label-wrap.open {
+    border-bottom: initial !important;
     background: var(--button-secondary-background-fill-hover);
     border-radius: 7px !important;
     height: 40px;
@@ -483,7 +477,7 @@
 #filterBox > div:nth-child(2) > span:nth-child(2),
 #filterBoxL > div:nth-child(2) > span:nth-child(2) {
     transform: rotate(0deg) !important;
-    transition: 0s !important;
+    transition: initial !important;
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -649,8 +643,8 @@
 }
 
 .description-toggle-checkbox:checked + .model-description {
-    max-height: unset !important;
-    position: unset !important;
+    max-height: initial !important;
+    position: initial !important;
 }
 
 .model-description + .description-toggle-label::before {
@@ -716,13 +710,6 @@
     color: #80a6c8!important;
 }
 
-/*
-#civitai_preview_html dt {
-    font-size: medium;
-    color: #3966bb !important;
-}
-*/
-
 #civitai_preview_html dd {
 	padding: 0px 0px 10px 10px;
 }
@@ -783,7 +770,7 @@
 }
 
 #civitai_preview_html .accordionCheckbox:checked ~ .tab-content {
-    max-height: unset;
+    max-height: initial;
     padding: 1em;
 }
 /*-----------------------------------------*/
